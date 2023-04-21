@@ -17,4 +17,4 @@
 </h3>
 
 
-<h1>Make sure you have intall Mysql</h1>
+<h1>Make sure Mysql is installed</h1>
