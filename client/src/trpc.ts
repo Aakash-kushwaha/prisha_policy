@@ -19,3 +19,12 @@ export const getUser = async (setBooks) => {
     console.log("err:", err);
   }
 };
+export const updateRating = async (id,rating) => {
+  console.log(id,rating)
+  try {
+    const data = await Client.updaterating.query({id,rating})
+    console.log(data,"rating data")
+  } catch (err) {
+    console.log("err:", err);
+  }
+};

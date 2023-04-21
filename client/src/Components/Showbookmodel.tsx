@@ -36,11 +36,12 @@ import Showbook from "./Showbook";
         <Modal
           isOpen={isOpen}
           onClose={onClose}
-          size="full"
+          size="auto"
+         
       
         >
           <ModalOverlay />
-          <ModalContent marginTop={"3rem"}  border={"1px solid blue"}>
+          <ModalContent marginTop={"3rem"} w={"90%"}  border={"1px solid blue"}>
             <ModalBody>
               <Button colorScheme="teal" size="md" onClick={onClose}>
                 Back to home

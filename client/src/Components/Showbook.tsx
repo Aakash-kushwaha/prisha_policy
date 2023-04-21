@@ -2,13 +2,16 @@ import React from "react";
 import styles from "./showbook.module.css";
 import { Box, Button } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
+import { updateRating } from "../trpc";
 
 const Showbook = ({ el }) => {
   const [ind, setInd] = React.useState();
   const [data, setData] = React.useState({ ...el });
   const [rate, setRate] = React.useState(false);
 
-  console.log(ind, "inde");
+  React.useEffect(()=>{
+   if(ind) updateRating(el.userId,ind)
+  },[ind])
   return (
     <div className={styles.container}>
       <div className={styles.imgdiv}>
@@ -17,9 +20,11 @@ const Showbook = ({ el }) => {
       <div>
         <p>{data.name}</p>
         <p>{data.author}</p>
-        <p>{data.book_read_times}</p>
+        <p>Book Read Time :{
+        Math.floor(data.book_read_times)%60
+        } hours</p>
         <p>{data.book_details}</p>
-        <p>{data.rating}</p>
+        <p>Ratings :{ind?ind: data.rating}</p>
 
         {rate ? (
           <Box display="flex" mt="2" alignItems="center">
@@ -31,14 +36,14 @@ const Showbook = ({ el }) => {
                   id={i}
                   color={
                     ind != null
-                      ? i <= ind
+                      ? i < ind
                         ? "teal.500"
                         : "gray.300"
                       : i < data.rating
                       ? "teal.500"
                       : "gray.300"
                   }
-                  onClick={() => setInd(i)}
+                  onClick={() => setInd(i+1)}
                 />
               ))}
           </Box>
