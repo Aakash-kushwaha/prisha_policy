@@ -13,5 +13,8 @@
 <h3>In order to run the frontend put the command "npm start"</h3>
 <br>
 <br>
-<h3>Note : If there is any error showing while installing the depedencies use "--force"</h3>
+<h3>Note : If there is any error showing while installing the depedencies use "--force"
+</h3>
 
+
+<h1>Make sure you have intall Mysql</h1>
