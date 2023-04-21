@@ -1,0 +1,15 @@
+.imgdiv{
+    border:1px solid black;
+    width: 40%;
+}
+.imgdiv>img{
+    width: 100%;
+}
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: auto;
+}

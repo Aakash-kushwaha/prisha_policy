@@ -1,0 +1,19 @@
+.Nav{
+    display:flex;
+gap:10vh;
+margin-top: 2rem;
+
+}
+.Nav>img{
+    /* border:1px solid black; */
+    height:12vh;
+    width: 20vh;
+    margin-left: 10vh;
+}
+.NavC2{
+    margin-left: 50vh;
+    display:flex;
+    gap:10vh;
+    /* border: 1px solid red; */
+    margin-top: 3vh;
+}
